@@ -28,10 +28,12 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app bg-light">
         @include('layouts.partials.navbar')
 
-        <main class="py-4">
+        @include('layouts.partials.sidebar')
+
+        <main class="mt-5 pt-3">
             @yield('content')
         </main>
     </div>

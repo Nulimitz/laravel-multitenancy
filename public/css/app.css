@@ -1,43 +1,40 @@
 :root {
     --offcanvas-width: 270px;
-    --topNavbarHeight: 0px;
-}
-
-.sidebar-nav {
+    --topNavbarHeight: 56px;
+  }
+  .sidebar-nav {
     width: var(--offcanvas-width);
-}
-
-.sidebar-link {
+  }
+  .sidebar-nav .nav-item.active {
+    background-color: #fff;
+  }
+  .sidebar-link {
     display: flex;
     align-items: center;
-}
-
-.sidebar-link .right-icon {
+  }
+  .sidebar-link .right-icon {
     display: inline-flex;
-}
-
-.sidebar-link[aria-expanded="true"] .right-icon {
+  }
+  .sidebar-link[aria-expanded="true"] .right-icon {
     transform: rotate(180deg);
-}
-
-@media (min-width: 992px) {
+  }
+  @media (min-width: 992px) {
     body {
-        overflow: auto !important;
+      overflow: auto !important;
     }
-
-    main.withSidebar {
-        margin-left: var(--offcanvas-width);
+    main {
+      margin-left: var(--offcanvas-width);
     }
-
     /* this is to remove the backdrop */
     .offcanvas-backdrop::before {
-        display: none;
+      display: none;
     }
-
     .sidebar-nav {
-        transform: none;
-        visibility: visible !important;
-        height: calc(100% - var(--topNavbarHeight));
-        top: var(--topNavbarHeight);
+      -webkit-transform: none;
+      transform: none;
+      visibility: visible !important;
+      height: calc(100% - var(--topNavbarHeight));
+      top: var(--topNavbarHeight);
+      padding: 5px 0;
     }
-}
+  }
