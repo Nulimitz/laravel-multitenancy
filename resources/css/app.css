@@ -19,7 +19,7 @@
   body {
     overflow: auto !important;
   }
-  main {
+  main.withSidebar {
     margin-left: var(--offcanvas-width);
   }
   /* this is to remove the backdrop */

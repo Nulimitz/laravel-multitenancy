@@ -26,11 +26,7 @@
 
 <body>
     <div id="app bg-light">
-        @include('layouts.partials.navbar')
-
-        @include('layouts.partials.sidebar')
-
-        <main class="withSidebar mt-5 pt-3">
+        <main>
             @yield('content')
         </main>
     </div>
